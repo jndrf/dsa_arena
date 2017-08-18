@@ -14,8 +14,9 @@ class Weapon():
         self.damageDie = Die.d6
 
         self.combatTechnique = 'dolche'
-    def makeDamage(self):
-        return baseDamage + damagedie.roll()
 
-    def getModifiers(self, property):
+    def makeDamage(self):
+        return self.baseDamage + self.damageDie.roll()
+
+    def getModifier(self, property):
         return self.modifiers[property]
